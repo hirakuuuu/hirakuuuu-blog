@@ -1,2 +1,3 @@
 FROM node
-USER node
+
+RUN yarn global add firebase-tools
