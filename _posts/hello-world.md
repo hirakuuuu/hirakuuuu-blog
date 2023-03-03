@@ -345,6 +345,8 @@ https://zenn.dev/__example__
 https://twitter.com/jack/status/20
 ```
 
+https://twitter.com/jack/status/20
+
 以前は`@[tweet](ツイートのURL)`の記法を採用していましたが、2020/12/27〜URL を貼り付けるだけでツイートを埋め込むことが可能になりました。
 
 :::details アンダースコア _ を含む URL が正しく認識されない場合
@@ -371,6 +373,8 @@ https://twitter.com/__example__/status/12345678910
 # YouTubeのURLだけの行（前後に改行が必要です）
 https://www.youtube.com/watch?v=jNQXAC9IVRw
 ```
+
+https://www.youtube.com/watch?v=jNQXAC9IVRw
 
 以前は`@[youtube](YouTubeの動画ID)`という記法を採用していましたが、2021/03/03〜URL を貼り付けるだけで動画を埋め込むことが可能になりました。
 

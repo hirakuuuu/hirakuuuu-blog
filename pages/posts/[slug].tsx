@@ -9,10 +9,8 @@ import { getPostBySlug, getAllPosts } from "../../lib/api";
 import PostTitle from "../../components/post-title";
 import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
-import markdownToHtml from "../../lib/markdownToHtml";
+import markdownToHtml from "zenn-markdown-html";
 import type PostType from "../../interfaces/post";
-import { useEffect } from "react";
-import initTwitterScriptInner from "zenn-embed-elements/lib/init-twitter-script-inner";
 
 type Props = {
   post: PostType;
@@ -27,24 +25,15 @@ export default function Post({ post, morePosts, preview }: Props) {
     return <ErrorPage statusCode={404} />;
   }
 
-  useEffect(() => {
-    import("zenn-embed-elements");
-  }, []);
-
   return (
     <Layout preview={preview}>
-      <script
-        dangerouslySetInnerHTML={{
-          __html: initTwitterScriptInner,
-        }}
-      />
       <Container>
         <Header />
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
         ) : (
           <>
-            <article className="mb-32">
+            <article className="mb-32 znc">
               <Head>
                 <title>{title}</title>
                 <meta property="og:image" content={post.ogImage.url} />
