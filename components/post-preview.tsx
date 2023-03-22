@@ -17,7 +17,7 @@ const PostPreview = ({ title, date, excerpt, slug }: Props) => {
       <Link
         as={`/posts/${slug}`}
         href="/posts/[slug]"
-        className="block max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
+        className="block max-w-sm min-w-full p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700"
       >
         <div className="flex-1 ml-2">
           <h3 className="text-xl">{title}</h3>
