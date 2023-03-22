@@ -6,26 +6,14 @@ import type Author from "../interfaces/author";
 
 type Props = {
   title: string;
-  coverImage: string;
   date: string;
   excerpt: string;
-  author: Author;
   slug: string;
 };
 
-const PostPreview = ({
-  title,
-  coverImage,
-  date,
-  excerpt,
-  author,
-  slug,
-}: Props) => {
+const PostPreview = ({ title, date, excerpt, slug }: Props) => {
   return (
     <div className="flex flex-row items-start">
-      {/* <div className="w-32 h-32">
-        <CoverImage slug={slug} title={title} src={coverImage} />
-      </div> */}
       <Link
         as={`/posts/${slug}`}
         href="/posts/[slug]"

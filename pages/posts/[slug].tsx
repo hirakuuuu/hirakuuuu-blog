@@ -36,14 +36,8 @@ export default function Post({ post, morePosts, preview }: Props) {
             <article className="mb-32 znc">
               <Head>
                 <title>{title}</title>
-                <meta property="og:image" content={post.ogImage.url} />
               </Head>
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
+              <PostHeader title={post.title} date={post.date} />
               <PostBody content={post.content} />
             </article>
           </>
