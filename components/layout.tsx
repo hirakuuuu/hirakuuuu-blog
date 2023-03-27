@@ -18,9 +18,7 @@ const Layout = ({ preview, children }: Props) => {
     <>
       <Meta />
       <div className="min-h-screen">
-        <div className="js-show-on-scroll">
-          <Header />
-        </div>
+        <Header />
         <main>{children}</main>
         <div className="js-show-on-scroll">
           <Footer />
