@@ -22,7 +22,9 @@ export default function Index({ allPosts }: Props) {
           <title>{`hirakuuuu`}</title>
         </Head>
         <Container>
-          <Intro />
+          <div className="js-show-on-scroll">
+            <Intro />
+          </div>
           {/* {heroPost && (
             <HeroPost
               title={heroPost.title}

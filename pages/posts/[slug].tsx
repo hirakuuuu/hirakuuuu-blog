@@ -36,8 +36,10 @@ export default function Post({ post, morePosts, preview }: Props) {
               <Head>
                 <title>{title}</title>
               </Head>
-              <PostHeader title={post.title} date={post.date} />
-              <PostBody content={post.content} />
+              <div className="js-show-on-scroll">
+                <PostHeader title={post.title} date={post.date} />
+                <PostBody content={post.content} />
+              </div>
             </article>
           </>
         )}
