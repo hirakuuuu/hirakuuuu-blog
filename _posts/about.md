@@ -1,7 +1,7 @@
 ---
 title: "About"
 excerpt: "自己紹介。"
-date: "2020-03-16T05:35:07.322Z"
+date: 2023-03-27T17:47
 ---
 
 # About me
