@@ -4,7 +4,7 @@ import IconButton from "./icon-button";
 
 const Footer = () => {
   return (
-    <footer className="bg-theme-1 dark:bg-theme-5 w-full py-4">
+    <footer className="bg-[#AEAEAE] dark:bg-[#2B2B2B] sticky top-[100vh] w-full py-4">
       <div>
         <div className="pt-2 flex max-w-xs mx-auto items-center justify-evenly">
           <IconButton

@@ -1,6 +1,6 @@
 import React from "react";
 
-const scrollFadeUp = () => {
+const ScrollFadeUp = () => {
   const callback = (entries: IntersectionObserverEntry[]) => {
     entries.forEach((entry) => {
       //console.log(entry);
@@ -18,4 +18,4 @@ const scrollFadeUp = () => {
   });
 };
 
-export default scrollFadeUp;
+export default ScrollFadeUp;

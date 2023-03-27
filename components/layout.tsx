@@ -3,7 +3,7 @@ import { useEffect } from "react";
 import Footer from "./footer";
 import Header from "./header";
 import Meta from "./meta";
-import scrollFadeUp from "./scrollFadeUp";
+import ScrollFadeUp from "./scroll-fade-up";
 
 type Props = {
   preview?: boolean;
@@ -12,7 +12,7 @@ type Props = {
 
 const Layout = ({ preview, children }: Props) => {
   useEffect(() => {
-    scrollFadeUp();
+    ScrollFadeUp();
   }, []);
   return (
     <>
@@ -20,9 +20,7 @@ const Layout = ({ preview, children }: Props) => {
       <div className="min-h-screen">
         <Header />
         <main>{children}</main>
-        <div className="js-show-on-scroll">
-          <Footer />
-        </div>
+        <Footer />
       </div>
     </>
   );
