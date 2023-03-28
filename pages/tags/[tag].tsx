@@ -36,6 +36,8 @@ export const getStaticProps = ({ params }: Params) => {
         'title',
         'date',
         'slug',
+        'author',
+        'coverImage',
         'excerpt',
         'tags'
     ])
