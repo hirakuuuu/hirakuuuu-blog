@@ -10,7 +10,7 @@ type Props = {
     tag: string;
 }
 
-export default function Index({ posts, tag}: Props) {
+export default function Index({ posts, tag }: Props) {
     return (
         <>
             <Layout>
@@ -35,6 +35,7 @@ export const getStaticProps = ({ params }: Params) => {
     const posts = getPostsByTag(params.tag, [
         'title',
         'date',
+        'slug',
         'excerpt',
         'tags'
     ])
