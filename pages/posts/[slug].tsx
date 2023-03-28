@@ -37,7 +37,7 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <title>{title}</title>
               </Head>
               <div className="js-show-on-scroll">
-                <PostHeader title={post.title} date={post.date} />
+                <PostHeader title={post.title} date={post.date} tags={post.tags}/>
                 <PostBody content={post.content} />
               </div>
             </article>
@@ -63,6 +63,7 @@ export async function getStaticProps({ params }: Params) {
     "content",
     "ogImage",
     "coverImage",
+    "tags",
   ]);
   const content = await markdownToHtml(post.content || "");
 

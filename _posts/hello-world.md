@@ -2,12 +2,15 @@
 title: "zennのMarkdown記法一覧"
 excerpt: "markdownの出力をzennの形式にしたので、記法をまとめた記事を書いてみた。"
 coverImage: "/assets/blog/hello-world/cover.jpg"
-date: 2023-03-27T17:47
+date: 2023-03-28T13:09
 author:
   name: Tim Neutkens
   picture: "/assets/blog/authors/tim.jpeg"
 ogImage:
   url: "/assets/blog/hello-world/cover.jpg"
+tags:
+  - "tag1"
+  - "tag2"
 ---
 
 # 見出し
