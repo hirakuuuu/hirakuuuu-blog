@@ -12,23 +12,23 @@ const Header = () => {
         <div className="mx-auto max-w-7xl flex justify-between h-16 px-2">
           <div className="flex space-x-8 items-center">
             <Link
-              className="text-[#2B2B2B] dark:text-[#AEAEAE]  hover:text-yellow-900 rounded-md text-sm font-medium"
+              className="text-[#2B2B2B] dark:text-[#AEAEAE] hover:text-yellow-900 rounded-md text-sm font-medium"
               href="/"
             >
-              Home
+              {"<Home />"}
             </Link>
-            <a
+            <Link
               className="text-[#2B2B2B] dark:text-[#AEAEAE] hover:text-yellow-900 rounded-md text-sm font-medium"
               href="/posts/about/"
             >
-              About
-            </a>
-            <a
+              {"<About />"}
+            </Link>
+            <Link
               className="text-[#2B2B2B] dark:text-[#AEAEAE] hover:text-yellow-900 rounded-md text-sm font-medium"
               href="/tags/"
             >
-              Tag
-            </a>
+              {"<Tag />"}
+            </Link>
           </div>
         </div>
       </nav>
