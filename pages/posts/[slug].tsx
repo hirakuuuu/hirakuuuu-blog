@@ -20,7 +20,7 @@ type Props = {
 
 export default function Post({ post, morePosts, preview }: Props) {
   const router = useRouter();
-  const title = `${post.title} | Next.js Blog Example with ${CMS_NAME}`;
+  const title = `${post.title}`;
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />;
   }
@@ -37,7 +37,11 @@ export default function Post({ post, morePosts, preview }: Props) {
                 <title>{title}</title>
               </Head>
               <div className="js-show-on-scroll">
-                <PostHeader title={post.title} date={post.date} tags={post.tags}/>
+                <PostHeader
+                  title={post.title}
+                  date={post.date}
+                  tags={post.tags}
+                />
                 <PostBody content={post.content} />
               </div>
             </article>
