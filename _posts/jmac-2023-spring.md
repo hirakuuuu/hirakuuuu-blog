@@ -11,7 +11,8 @@ tags:
 一応自分は運営側でもあったのですが、この記事は参加者目線で書いてます。
 
 作ったものは GitHub に上げてあります。（コミットメッセージがひどいのは許してください）
-https://github.com/hirakuuuu/jmac_sdk
+
+- https://github.com/hirakuuuu/jmac_sdk
 
 # 参加したきっかけ
 
