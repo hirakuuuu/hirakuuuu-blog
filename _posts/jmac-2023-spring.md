@@ -1,5 +1,5 @@
 ---
-title: "JMAC(麻雀AIコンペ)参加記"
+title: "JMAC（麻雀AIコンペ）参加記"
 excerpt: "サークル内の麻雀AIのコンペに参加したときの記録。"
 date: "2023-04-04"
 tags:
