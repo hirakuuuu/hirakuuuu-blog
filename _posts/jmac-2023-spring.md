@@ -35,7 +35,8 @@ tags:
 # 開発環境
 
 mjx という麻雀 AI のための python フレームワークを、Docker 上で使えるようにしたものが用意されていました。
-https://github.com/mjx-project/mjx
+
+- https://github.com/mjx-project/mjx
 
 また、機械学習用のデータは、天鳳のログを mjx で使えるように変換したもの（約 75000 半荘分）が用意されていました。
 このデータは中々容量が大きかったので、ファイルを分割して保存する等の工夫が必要でした。
