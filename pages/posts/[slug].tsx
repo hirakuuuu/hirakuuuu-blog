@@ -11,6 +11,9 @@ import Head from "next/head";
 import { CMS_NAME } from "../../lib/constants";
 import markdownToHtml from "zenn-markdown-html";
 import type PostType from "../../interfaces/post";
+import type TableOfContentType from "../../interfaces/table-of-content";
+import TableOfContents from "../../components/table-of-contents";
+import { JSDOM } from "jsdom";
 
 type Props = {
   post: PostType;
@@ -36,13 +39,16 @@ export default function Post({ post, morePosts, preview }: Props) {
               <Head>
                 <title>{title}</title>
               </Head>
-              <div className="js-show-on-scroll">
+              <div className="js-show-on-scroll max-w-9xl">
                 <PostHeader
                   title={post.title}
                   date={post.date}
                   tags={post.tags}
                 />
-                <PostBody content={post.content} />
+                <div className="flex flex-row justify-center">
+                  <PostBody content={post.content} />
+                  <TableOfContents contents={post.tableOfContents} />
+                </div>
               </div>
             </article>
           </>
@@ -69,13 +75,30 @@ export async function getStaticProps({ params }: Params) {
     "coverImage",
     "tags",
   ]);
+
+  // markdownからHTML(string)を生成
   const content = await markdownToHtml(post.content || "");
+  // HTML(string)をHTML(DOM)に変換する
+  const domHTML = new JSDOM(content).window.document;
+  // DOMから目次を検索し、{}を取得
+  const elements = domHTML.querySelectorAll<HTMLElement>("h1, h2");
+  const tableOfContents: TableOfContentType[] = [];
+
+  elements.forEach((element) => {
+    const level = element.tagName;
+    const title = element.innerHTML.split("</a>")[1];
+    const href = "#" + element.id;
+    const record = { level: level, title: title, href: href };
+    tableOfContents.push(record);
+    // console.log(record);
+  });
 
   return {
     props: {
       post: {
         ...post,
         content,
+        tableOfContents,
       },
     },
   };

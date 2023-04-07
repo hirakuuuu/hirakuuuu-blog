@@ -15,14 +15,25 @@ const PostHeader = ({ title, date, tags }: Props) => {
   return (
     <>
       <PostTitle>{title}</PostTitle>
-      <ul className="flex flex-wrap items-center gap-2 md:gap-4" style={{paddingLeft: "0px"}}>
-        {tags.map((tag, index) => <li key={index} className="font-bold block">
-          <Link href={`/tags/${tag}`} className="block" style={{ textDecoration: "none"}}>
-          <div className="px-6 rounded-full text-[#2B2B2B] hover:text-yellow-900 border-2 font-extrabold">{tag}</div>
-          </Link>
-        </li>)}
-      </ul>
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-[76.75rem] mx-auto">
+        <ul
+          className="flex flex-wrap items-center gap-2 md:gap-4"
+          style={{ paddingLeft: "0px" }}
+        >
+          {tags.map((tag, index) => (
+            <li key={index} className="font-bold block">
+              <Link
+                href={`/tags/${tag}`}
+                className="block"
+                style={{ textDecoration: "none" }}
+              >
+                <div className="px-6 rounded-full text-[#2B2B2B] hover:text-yellow-900 border-2 font-extrabold">
+                  {tag}
+                </div>
+              </Link>
+            </li>
+          ))}
+        </ul>
         <div className="mb-6 text-lg">
           <DateFormatter dateString={date} />
         </div>

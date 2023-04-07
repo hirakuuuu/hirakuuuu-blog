@@ -6,11 +6,13 @@ type Props = {
 
 const PostBody = ({ content }: Props) => {
   return (
-    <div className="max-w-2xl mx-auto znc">
-      <div
-        className={markdownStyles["markdown"]}
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
+    <div className="max-w-7xl znc">
+      <div className="max-w-5xl px-4 md:pr-10">
+        <div
+          className={markdownStyles["markdown"]}
+          dangerouslySetInnerHTML={{ __html: content }}
+        />
+      </div>
     </div>
   );
 };
